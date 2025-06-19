@@ -54,6 +54,8 @@
   position: relative;
   box-shadow: 0 2px 4px var(--ttt-shadow);
   user-select: none;
+  padding: 0;
+  line-height: 0;
 }
 .ttt-square[aria-label^="Empty"] {
   color: #b5b5b5;
