@@ -1,0 +1,100 @@
+:root {
+  --primary: #4CAF50;
+  --secondary: #FFC107;
+  --accent: #2196F3;
+  --ttt-bg: #f9f9f9;
+  --ttt-border: #e0e0e0;
+  --ttt-shadow: rgba(60,60,60,0.045);
+  --ttt-square-size: 84px;
+  --ttt-square-font: 2.25rem;
+  --ttt-status-font: 1.13rem;
+  --ttt-boardgap: 8px;
+}
+
+.ttt-container {
+  background: var(--ttt-bg);
+  margin: 40px auto 0 auto;
+  max-width: 340px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px var(--ttt-shadow);
+  padding: 36px 20px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ttt-boardgap);
+}
+
+.ttt-board-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ttt-boardgap);
+}
+
+.ttt-square {
+  width: var(--ttt-square-size);
+  height: var(--ttt-square-size);
+  background: white;
+  border: 2px solid var(--ttt-border);
+  border-radius: 8px;
+  font-size: var(--ttt-square-font);
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  transition: box-shadow 0.16s, background 0.19s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  box-shadow: 0 2px 4px var(--ttt-shadow);
+  user-select: none;
+}
+.ttt-square[aria-label^="Empty"] {
+  color: #b5b5b5;
+}
+.ttt-square:active, .ttt-square:focus {
+  box-shadow: 0 0 0 3px var(--accent), 0 2px 4px var(--ttt-shadow);
+  background: var(--secondary);
+}
+
+.ttt-square.highlight {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.ttt-status {
+  margin-bottom: 10px;
+  font-size: var(--ttt-status-font);
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  min-height: 28px;
+}
+
+.ttt-restart-btn {
+  margin-top: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.04rem;
+  font-weight: 500;
+  padding: 11px 32px;
+  letter-spacing: 1.3px;
+  box-shadow: 0 1px 2px var(--ttt-shadow);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.18s, box-shadow 0.16s;
+}
+.ttt-restart-btn:hover, .ttt-restart-btn:focus {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 6px var(--ttt-shadow);
+}
